@@ -1,9 +1,27 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; 1< array.length; i++) {
+    const complement = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if(array[j] === complement) return true;
+    }
+  }
+  return false;
+}
+
+function findSock(array) {
+  for (const item of array) {
+    if (item === "sock") return "sock";
+  }
+}
+
+function findSock(object) {
+  if (object.sock) return "sock";
 }
 
 /* 
   Write the Big O time complexity of your function here
+  Runtime: O(n^2)
+  space: O(n)
 */
 
 /* 
@@ -11,6 +29,10 @@ function hasTargetSum(array, target) {
 */
 
 /*
+iterate through each number in the array for the current num,
+identify a complement that adds to the array 
+iterate through the rest of the array
+check if any number is our complement. 
   Add written explanation of your solution here
 */
 
