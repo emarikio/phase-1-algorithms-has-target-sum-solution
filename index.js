@@ -8,12 +8,16 @@ function hasTargetSum(array, target) {
   return false;
 }
 
+
+// O(n) runtime
 function findSock(array) {
   for (const item of array) {
     if (item === "sock") return "sock";
   }
 }
 
+
+// O(1) runtime
 function findSock(object) {
   if (object.sock) return "sock";
 }
@@ -26,6 +30,12 @@ function findSock(object) {
 
 /* 
   Add your pseudocode here
+  iterate over the array of numbers 
+  for the current number, identify a acomplementary number that adds to our target
+  (for example: if our number is 2, and the target is 5, the complemntary number is 3)
+  iterate over the remaining numbers is the compliment
+  if so, return true
+  if we reach the end of the array, return false
 */
 
 /*
